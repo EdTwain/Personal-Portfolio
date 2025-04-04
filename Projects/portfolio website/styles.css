@@ -1,0 +1,92 @@
+
+
+/*[class^="ri-"]::before { content: "\f3c2"; }*/
+
+
+      body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+      }
+
+      .home-section {
+            background-image: url('img/background.jpg');
+            background-size: cover;
+            background-position: center;
+          }
+          
+
+      .nav-link {
+      position: relative;
+      }
+      .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #3b82f6;
+      transition: width 0.3s;
+      }
+      .nav-link:hover::after, .nav-link.active::after {
+      width: 100%;
+      }
+      .project-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+      .skill-bar {
+      height: 8px;
+      background-color: #e5e7eb;
+      border-radius: 4px;
+      overflow: hidden;
+      }
+      .skill-progress {
+      height: 100%;
+      background-color: #3b82f6;
+      border-radius: 4px;
+      }
+      .skill-95 .skill-progress {
+            width: 95%;
+            background-color: #4caf50; 
+        }
+        
+        .skill-85 .skill-progress {
+            width: 85%;
+            background-color: #2196f3;
+        }
+        
+        .skill-80 .skill-progress {
+            width: 80%;
+            background-color: #ff9800;
+        }
+        
+        .skill-90 .skill-progress {
+            width: 90%;
+            background-color: #9c27b0;
+        }
+
+      .modal {
+      transition: opacity 0.3s, visibility 0.3s;
+      }
+      input:focus, textarea:focus {
+      outline: none;
+      border-color: #3b82f6;
+      }
+      .scroll-indicator {
+      animation: bounce 2s infinite;
+      }
+      @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+      }
+      40% {
+      transform: translateY(-10px);
+      }
+      60% {
+      transform: translateY(-5px);
+      }
+      }
